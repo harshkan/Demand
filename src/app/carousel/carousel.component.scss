@@ -3,6 +3,8 @@
     margin: 5em auto;
     padding: 0;
     background:#fff;
+    outline: 2px solid red;
+
 }
 
 .items {
@@ -13,4 +15,8 @@
 
 #left, #right {
     margin: 10px;
+}
+app-miniview{
+  outline: 2px solid red;
+
 }
