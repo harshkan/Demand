@@ -1,0 +1,17 @@
+<h1>{{title  | uppercase}}</h1>
+
+<div class="topnav">
+  <a  routerLink="/monthlyview" routerLinkActive="active">My Requirement</a>
+  <a routerLink="/fullview" routerLinkActive="active">Requsest By Me</a>
+    <a routerLink="/addrequest" routerLinkActive="active">Add Request</a>
+<select id ="view">
+  <option selected="selected">Select a View</option>
+  <option>Monthly View</option>
+  <option>Team View</option>
+  <option>Skillset View</option>
+</select>
+</div>
+
+
+<br>
+<router-outlet></router-outlet>
