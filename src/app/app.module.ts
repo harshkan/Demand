@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule  } from '@angular/core';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -31,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
 
   ],
   providers: [],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
