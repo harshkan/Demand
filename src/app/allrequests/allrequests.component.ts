@@ -6,18 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./allrequests.component.css']
 })
 export class AllrequestsComponent implements OnInit {
-  private fieldArray: Array<any> = [];
-     private newAttribute: any = {};
 
-     addFieldValue() {
-         this.fieldArray.push(this.newAttribute)
-         this.newAttribute = {};
-     }
+Tabledata : any = [];
+showedittable : boolean =false;
+editrowid : any='';
+  constructor() {
+    this.Tabledata=[{id:1,BRASSRINGID:'123TYY',STATUS:'inprogress',SKILLSET:'java',NOOFRESOURCES:10,DEADLINE:'29/6/18',LINEMANAGER:'AS',DESIGNATION:'AO',PROFILESOURCED:'NAMES',PROFILESHORTLISTED:'NAMES',INTERVIEW:'TIME',OFFERSROLLED:'NAMES',DATEOFJOIN:'4/6/18'},
+                    {id:2,BRASSRINGID:'123TYY',STATUS:'inprogress',SKILLSET:'java',NOOFRESOURCES:10,DEADLINE:'29/6/18',LINEMANAGER:'AS',DESIGNATION:'AO',PROFILESOURCED:'NAMES',PROFILESHORTLISTED:'NAMES',INTERVIEW:'TIME',OFFERSROLLED:'NAMES',DATEOFJOIN:'4/6/18'},
+                    {id:3,BRASSRINGID:'123TYY',STATUS:'inprogress',SKILLSET:'java',NOOFRESOURCES:10,DEADLINE:'29/6/18',LINEMANAGER:'AS',DESIGNATION:'AO',PROFILESOURCED:'NAMES',PROFILESHORTLISTED:'NAMES',INTERVIEW:'TIME',OFFERSROLLED:'NAMES',DATEOFJOIN:'4/6/18'},
+                    {id:4,BRASSRINGID:'123TYY',STATUS:'inprogress',SKILLSET:'java',NOOFRESOURCES:10,DEADLINE:'29/6/18',LINEMANAGER:'AS',DESIGNATION:'AO',PROFILESOURCED:'NAMES',PROFILESHORTLISTED:'NAMES',INTERVIEW:'TIME',OFFERSROLLED:'NAMES',DATEOFJOIN:'4/6/18'}
+  ];
+   }
+   Edit(value)
+   {
+     this.editrowid=value;
 
-     deleteFieldValue(index) {
-         this.fieldArray.splice(index, 1);
-     }
-  constructor() { }
+   }
 
   ngOnInit() {
   }
