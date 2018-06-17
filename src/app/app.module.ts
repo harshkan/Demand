@@ -10,6 +10,7 @@ import { MiniviewComponent } from './miniview/miniview.component';
 import { AppRoutingModule,routingComponents } from './/app-routing.module';
 import { MonthlyviewComponent } from './monthlyview/monthlyview.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AllrequestsComponent } from './allrequests/allrequests.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     AddrequestComponent,
     FullviewComponent,
     MiniviewComponent,
-    MonthlyviewComponent
+    MonthlyviewComponent,
+    AllrequestsComponent
 
 
     ],

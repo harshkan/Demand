@@ -1,53 +1,66 @@
+{{req.DEADLINE}}{{req.DEPARTMENT}}{{req.SKILLSET}}{{req.NOOFRESOURCES}}{{req.BRASSRINGID}}{{req.DESIGNATION}}{{req.MININMUMEXPERIENCE}}{{req.LINEMANAGER}}
+
 <div class="container">
+
     <h1>Add requests</h1>
-    <form>
+    <form #add ="ngForm" (ngSubmit)="submit($event,add.value)" >
       <div>
         <label for="dept">Department:</label>
-        <select id="view" >
-            <option selected="selected">Select Department</option>
-            <option >Finance It</option>
+        <select name="dept" id="view" [(ngModel)]="req.DEPARTMENT">
+
+            <option  >Finance It</option>
             <option >Risk IT</option>
             <option >Technology IT</option>
         </select>
       </div>
 <br>
-      <div >
+      <div id="demo" >
         <label for="skill">Skillset:</label>
-        <input type="text"  id="skill" required>
+        <input name="skill" type="text"  id="skill" [(ngModel)]="req.SKILLSET" placeholder="here">
+
 
       </div>
       <br>
      <div >
         <label >No Of Resources:</label>
-        <input type="text" class="form-control" id="noofresources">
+        <input type="text"  name="noofresources" [(ngModel)]="req.NOOFRESOURCES" placeholder="here">
       </div>
       <br>
       <div class="form-group">
          <label >Brass Ring ID:</label>
-         <input type="text" class="form-control" id="brassid">
+         <input type="text" name="brassid" [(ngModel)]="req.BRASSRINGID">
        </div>
        <br>
 
       <div class="form-group">
         <label for="designation">Designation:</label>
-        <input type="text" class="form-control" id="designation">
+        <select id="view" name="designation" [(ngModel)]="req.DESIGNATION" >
+
+            <option  >AO</option>
+            <option >DI</option>
+            <option >AD</option>
+        </select>
       </div>
       <br>
       <div class="form-group">
         <label for="minexperience">Minimum Experience:</label>
-        <input type="text" class="form-control" id="minexperience">
+        <select name="exp" id="view" [(ngModel)]="req.MININMUMEXPERIENCE">
+          <option name="year" *ngFor="let i of experience">{{i}}</option>
+        </select>
       </div>
       <br>
       <div class="form-group">
         <label for=" linemanager"> line Manager:</label>
-        <input type="text" class="form-control" id="linemanager">
+        <select id="view" name="Manager" [(ngModel)]="req.LINEMANAGER" >
+          <option *ngFor="let i of linemanager">{{i}}</option>
+        </select>
       </div>
       <br>
-      <div class="form-group">
-        <label for=" linemanager"> Deadline:</label>
-       <input type="date" name="bday" id="deadline">
+      <div class="form-control">
+        <label > Deadline:</label>
+       <input class="form-control"name="date" type="date" [(ngModel)]="req.DEADLINE" required>
       </div>
  <br>
-      <button type="submit" >Submit</button>
+      <button type="submit" value="submit"  >Submit</button>
     </form>
 </div>
